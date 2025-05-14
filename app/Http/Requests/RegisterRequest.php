@@ -33,6 +33,8 @@ class RegisterRequest extends FormRequest
         return [
             'name.required' => 'El nombre es requerido.',
             'email.required' => 'El correo electrónico es requerido.',
+            'email.email' => 'El correo electrónico no tiene un formato válido.',
+            'email.unique' => 'Este correo ya está registrado.',
             'password.confirmed' => 'Las contraseñas no coinciden.',
         ];
     }
