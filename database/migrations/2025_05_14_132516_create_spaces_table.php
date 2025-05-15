@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('spaces', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description')->unique();
+            $table->string('name')->unique();
+            $table->string('description');
             $table->boolean('available')->default(true);
             $table->timestamps();
         });
