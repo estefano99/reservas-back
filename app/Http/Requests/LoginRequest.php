@@ -24,7 +24,7 @@ class LoginRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|email',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
         ];
     }
 
@@ -33,7 +33,7 @@ class LoginRequest extends FormRequest
         return [
             'name.required' => 'El nombre es requerido.',
             'email.required' => 'El correo electrónico es requerido.',
-            'password.confirmed' => 'Las contraseñas no coinciden.',
+            'password.required' => 'La contraseña es requerida.',
         ];
     }
 }
